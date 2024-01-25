@@ -8,6 +8,9 @@ You can find me at tech conferences across EMEA (mostly Norther Europe) either a
 I also host the meetups at our Elastic Amsterdam office (one every month, we have pizza!)
 
 Some other links:
+
 https://www.linkedin.com/in/iuliaferoli/
+
 https://mastodon.social/@iulia_
+
 https://youtube.com/iuliaferoli
