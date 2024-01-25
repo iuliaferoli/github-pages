@@ -74,7 +74,7 @@ def show_search_term():
 This is rendered with a jinja2 template allowing us to loop through the list of documents we get back from Elastic and show them on the page:
 
 ```
-<body>html
+<body>
     <h1>Your query was: {{ question }}</h1>
     <p>Search Results:</p>
     <ul id="answer">
@@ -100,7 +100,7 @@ def show_history():
 
 The template is very similar to the previous, just with one extra for loop to show multiple lists on answers:
 
-```html
+```
 <h1>These are the past searches ran:</h1>
     
     {% for result in response %}
