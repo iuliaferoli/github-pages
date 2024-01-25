@@ -3,7 +3,7 @@ title: "Simple Flask Integration for an Elastic Semantic Search App"
 date: 2024-01-25
 ---
 
-#Simple Flask Integration for an Elastic Semantic Search App
+# Simple Flask Integration for an Elastic Semantic Search App
 
 ### Have you been on any websites without a search function lately? 
 How about ones that didn't allow for typos, synonyms, or "I forgot the exact word but I'm looking for something to do with these themes?". Probably not... or if you did it was likely a frustrating experience. 
