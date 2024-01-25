@@ -26,7 +26,8 @@ On the Elastic Side, you can see how I built my Semantic [Search App here](https
 What we want now is to abstract all that and only use a few simple functions to call the functionalities we need. Namely, connect to the client; run the actual user input as a semantic search on our index, and log the search to our history. See [these functions here](https://github.com/iuliaferoli/harry-potter-search/blob/main/helper_functions.py).
 
 Now let's Flask!
-I'm building three pages. 
+I'm building three pages, that will look like this:
+![flask pages interface](img/web_app.jpeg)
 
 ### 1. User input for our search.
 
@@ -37,8 +38,6 @@ The premise is simple - one simple form and one button.
 def search():
    return render_template('search.html')
 ```
-
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/k2k5eccfcvaxo3y0s61a.png)
 
 ```html
 <form action = "http://127.0.0.1:5000/search" method = "POST">
@@ -72,7 +71,6 @@ def show_search_term():
         return render_template('search_result.html', answer=answer, question =question)
 ```
 
-
 This is rendered with a jinja2 template allowing us to loop through the list of documents we get back from Elastic and show them on the page:
 
 ```
@@ -87,8 +85,6 @@ This is rendered with a jinja2 template allowing us to loop through the list of 
 </body>
 ```
 
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/d4kuwblif6lr5fcww643.png)
-
 Lastly, if you want to see previous searches, you can go to:
 
 ### 3. History of Searches.
@@ -101,8 +97,6 @@ def show_history():
    response = client.search(index = "historical_searches", sort=[{"date" : {"order": "desc"}}])
    return render_template('history.html', response = response["hits"]["hits"])
 ```
-
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/9nvzkm8az27ltnkv8ygb.png)
 
 The template is very similar to the previous, just with one extra for loop to show multiple lists on answers:
 
