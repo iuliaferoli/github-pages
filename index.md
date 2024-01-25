@@ -1,13 +1,12 @@
----
-title: # Simple Flask Integration for an Elastic Semantic Search App
----
 
-## Have you been on any websites without a search function lately? 
+# Simple Flask Integration for an Elastic Semantic Search App
+
+### Have you been on any websites without a search function lately? 
 How about ones that didn't allow for typos, synonyms, or "I forgot the exact word but I'm looking for something to do with these themes?". Probably not... or if you did it was likely a frustrating experience. 
 
 Semantic (or vector) Search is becoming ubiquitous in the way we interact with the internet - we're always looking for something, and we want to find it no matter how bad we may be at formulating what it is!
 
-## Enter Elasticsearch.
+### Enter Elasticsearch.
  
 With the Lucene-based engine you can quickly build an [index](https://www.elastic.co/guide/en/elasticsearch/reference/current/documents-indices.html) of documents (be it numbers, words, images, or sound) and start searching through them based on various filters, aggregations, and fancy new-age models like [ELSER](https://www.elastic.co/guide/en/machine-learning/current/ml-nlp-elser.html). 
 
@@ -17,7 +16,7 @@ In this blog, we're going to address the "on any website" part of a Search Solut
 
 However, as someone getting reacquainted/jumping deeper into the dev realm after mostly shallow toe-dipping I found some of the guides a bit overwhelming. So this will be a very simple, stripped-down, essentials-only example of a basic Flask app. 
 
-## So what's our Minimally Viable "Website with Search"?
+### So what's our minimally viable "Website with search"?
 We have a Search Engine we've built for our custom domain. (You can think of a retail online store, blogging website, cooking recipe inventory, news website, etc - what I'm using is the Harry Potter books, the content is mostly irrelevant.)
 
 On the Elastic Side, you can see how I built my Semantic [Search App here](https://github.com/iuliaferoli/harry-potter-search?tab=readme-ov-file#harry-potter-movie-dialoogue-index--intro-to-elasticsearch-python-client). 
@@ -27,7 +26,7 @@ What we want now is to abstract all that and only use a few simple functions to 
 Now let's Flask!
 I'm building three pages. 
 
-# 1. User Input For our Search.
+### 1. User input for our search.
 
 The premise is simple - one simple form and one button. 
 
@@ -47,7 +46,7 @@ def search():
 ```
 You can type in your query; and I will run it and route you to a page where you can see the results, namely: 
 
-# 2. View Result of Search
+### 2. View result of search
 
 This is the meat and potatoes of our project. For the user, it's another simple static page; but routing to this page runs the helper functions we mentioned earlier - interacting with our Elastic backend. 
 On the surface though, we quickly get the top results for our search in a few seconds. Users want to find stuff fast! 
@@ -90,7 +89,7 @@ This is rendered with a jinja2 template allowing us to loop through the list of 
 
 Lastly, if you want to see previous searches, you can go to:
 
-# 3. History of Searches.
+### 3. History of Searches.
 
 This page triggers a separate call to Elastic, asking to give us back the latest queries and answers that have been run by users. If the previous was meat and potatoes, this is... gravy?
 
