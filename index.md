@@ -14,3 +14,12 @@ https://www.linkedin.com/in/iuliaferoli/
 https://mastodon.social/@iulia_
 
 https://youtube.com/iuliaferoli
+
+
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
