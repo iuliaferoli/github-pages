@@ -27,7 +27,8 @@ What we want now is to abstract all that and only use a few simple functions to 
 
 Now let's Flask!
 I'm building three pages, that will look like this:
-![flask pages interface](img/web_app.jpeg)
+
+<img src=img/web_app.jpeg width="500">
 
 ### 1. User input for our search.
 
@@ -73,15 +74,15 @@ def show_search_term():
 
 This is rendered with a jinja2 template allowing us to loop through the list of documents we get back from Elastic and show them on the page:
 
-```
+```html
 <body>
-    <h1>Your query was: {{ question }}</h1>
-    <p>Search Results:</p>
-    <ul id="answer">
-    {% for item in answer %}
-    <li> {{ item }} </li>
-    {% endfor %}
-    </ul>
+<h1>Your query was: {{ question }}</h1>
+<p>Search Results:</p>
+<ul id="answer">
+{% for item in answer %}
+<li> {{ item }} </li>
+{% endfor %}
+</ul>
 </body>
 ```
 
@@ -100,19 +101,19 @@ def show_history():
 
 The template is very similar to the previous, just with one extra for loop to show multiple lists on answers:
 
-```
+```html
 <h1>These are the past searches ran:</h1>
     
-    {% for result in response %}
-    <p>Your query was: {{ result._source.Query }}</p>
-    <p>Search Results:</p>
-    <ul id="answer">
-    {% for item in result._source.Response %}
-    <li> {{ item }} </li>
-    {% endfor %}
-    </ul>
+{% for result in response %}
+<p>Your query was: {{ result._source.Query }}</p>
+<p>Search Results:</p>
+<ul id="answer">
+{% for item in result._source.Response %}
+<li> {{ item }} </li>
+{% endfor %}
+</ul>
 
-    {% endfor %}
+{% endfor %}
 ```
 
 There we go!
