@@ -31,7 +31,7 @@ I'm building three pages - so we will an HTML template file, and a function and 
 
 Our folder structure:
 
-<a href="_posts/img/folder_structure.png" width="300">
+![](docs/assets/folder_structure.png) 
 
 See the full [Python web_app](https://github.com/iuliaferoli/harry-potter-search/blob/main/web_app.py) file here
 
@@ -39,7 +39,7 @@ See the full [HTML template files](https://github.com/iuliaferoli/harry-potter-s
 
 The website pages will end us looking like this:
 
-<a href="_posts/img/web_app.jpeg">
+![](/docs/assets/img/web_app.jpeg)
 
 
 
