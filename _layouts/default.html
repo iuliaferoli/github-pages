@@ -23,7 +23,6 @@
         {% assign page_paths = site.header_pages | default: default_paths %}
         <a class="site-title" rel="author" href="{{ '/' | relative_url }}">
           <img src="{{ 'logo32.png' | relative_url }}" />
-          {{ site.title | escape }}
         </a>
         <a href="{{ '/' | absolute_url }}">
           <h1>{{ site.head_title | default: site.github.repository_name }}</h1>
