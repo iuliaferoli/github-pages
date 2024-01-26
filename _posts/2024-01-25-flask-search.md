@@ -32,7 +32,7 @@ I'm building three pages - so we will an HTML template file, and a function and 
 
 Our folder structure:
 
-![](/docs/assets/folder-structure.png){: width="50%"}
+![](/docs/img/folder-structure.png){: width="50%"}
 
 See the full [Python web_app](https://github.com/iuliaferoli/harry-potter-search/blob/main/web_app.py) file here
 
@@ -40,7 +40,7 @@ See the full [HTML template files](https://github.com/iuliaferoli/harry-potter-s
 
 The website pages will end us looking like this:
 
-![](/docs/assets/web-app.jpeg){: width="70%"}
+![](/docs/img/web-app.jpeg){: width="70%"}
 
 
 
