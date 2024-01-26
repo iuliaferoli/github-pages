@@ -29,13 +29,13 @@ Now let's Flask!
 I'm building three pages - so we will an HTML template file, and a function and API mapping for each.
 Our folder structure:
 
-<img src="/img/folder_structure.png" width="300">
+<img src="/_posts/img/folder_structure.png" width="300">
 
 See the full [Python web_app](https://github.com/iuliaferoli/harry-potter-search/blob/main/web_app.py) file here
 See the full [HTML template files](https://github.com/iuliaferoli/harry-potter-search/tree/main/templates) here
 
 The website pages will end us looking like this:
-<img src="/img/web_app.jpeg" width="500">
+<img src="/_posts/img/web_app.jpeg" width="500">
 
 
 ### 1. User input for our search.
