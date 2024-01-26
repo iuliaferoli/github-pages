@@ -39,7 +39,7 @@ See the full [HTML template files](https://github.com/iuliaferoli/harry-potter-s
 
 The website pages will end us looking like this:
 
-![](/docs/assets/img/web-app.jpeg)
+![](/docs/assets/web-app.jpeg)
 
 
 
