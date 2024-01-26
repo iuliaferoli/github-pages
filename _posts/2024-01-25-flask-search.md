@@ -26,15 +26,19 @@ On the Elastic Side, you can see how I built my Semantic [Search App here](https
 What we want now is to abstract all that and only use a few simple functions to call the functionalities we need. Namely, connect to the client; run the actual user input as a semantic search on our index, and log the search to our history. See [these functions here](https://github.com/iuliaferoli/harry-potter-search/blob/main/helper_functions.py).
 
 Now let's Flask!
+
 I'm building three pages - so we will an HTML template file, and a function and API mapping for each.
+
 Our folder structure:
 
 <img src="/_posts/img/folder_structure.png" width="300">
 
 See the full [Python web_app](https://github.com/iuliaferoli/harry-potter-search/blob/main/web_app.py) file here
+
 See the full [HTML template files](https://github.com/iuliaferoli/harry-potter-search/tree/main/templates) here
 
 The website pages will end us looking like this:
+
 <img src="/_posts/img/web_app.jpeg" width="500">
 
 
