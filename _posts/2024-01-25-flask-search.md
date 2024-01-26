@@ -31,7 +31,7 @@ I'm building three pages - so we will an HTML template file, and a function and 
 
 Our folder structure:
 
-<img src="_posts/img/folder_structure.png" width="300">
+<a href="_posts/img/folder_structure.png" width="300">
 
 See the full [Python web_app](https://github.com/iuliaferoli/harry-potter-search/blob/main/web_app.py) file here
 
@@ -39,7 +39,8 @@ See the full [HTML template files](https://github.com/iuliaferoli/harry-potter-s
 
 The website pages will end us looking like this:
 
-<img src="_posts/img/web_app.jpeg" width="500">
+<a href="_posts/img/web_app.jpeg">
+
 
 
 ### 1. User input for our search.
@@ -94,17 +95,18 @@ def show_search_term():
 This is rendered with a jinja2 template (allowing the HTML to use for statements to iterate through lists) allowing us to loop through the list of documents we get back from Elastic and show them on the page:
 
 ```html
-{% raw %}
 <body>
 <h1>Your query was: {{ question }}</h1>
 <p>Search Results:</p>
 <ul id="answer">
+{% raw %}
 {% for item in answer %}
 <li> {{ item }} </li>
 {% endfor %}
+{% endraw %}
 </ul>
 </body>
-{% endraw %}
+
 ```
 
 Lastly, if you want to see previous searches, you can go to:
@@ -123,18 +125,18 @@ def show_history():
 The template is very similar to the previous, just with one extra for loop to show multiple lists on answers:
 
 ```html
-{% raw %}
+
 <h1>These are the past searches ran:</h1>
-    
+{% raw %}
 {% for result in response %}
 <p>Your query was: {{ result._source.Query }}</p>
 <p>Search Results:</p>
 <ul id="answer">
+
 {% for item in result._source.Response %}
 <li> {{ item }} </li>
 {% endfor %}
 </ul>
-
 {% endfor %}
 {% endraw %}
 ```
