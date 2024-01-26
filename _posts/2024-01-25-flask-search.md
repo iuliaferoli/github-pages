@@ -26,13 +26,23 @@ On the Elastic Side, you can see how I built my Semantic [Search App here](https
 What we want now is to abstract all that and only use a few simple functions to call the functionalities we need. Namely, connect to the client; run the actual user input as a semantic search on our index, and log the search to our history. See [these functions here](https://github.com/iuliaferoli/harry-potter-search/blob/main/helper_functions.py).
 
 Now let's Flask!
-I'm building three pages, that will look like this:
+I'm building three pages - so we will an HTML template file, and a function and API mapping for each.
+Our folder structure:
 
-<img src=/img/web_app.jpeg width="500">
+<img src="/img/folder_structure.png" width="300">
+
+See the full [Python web_app](https://github.com/iuliaferoli/harry-potter-search/blob/main/web_app.py) file here
+See the full [HTML template files](https://github.com/iuliaferoli/harry-potter-search/tree/main/templates) here
+
+The website pages will end us looking like this:
+<img src="/img/web_app.jpeg" width="500">
+
 
 ### 1. User input for our search.
 
 The premise is simple - one simple form and one button. 
+
+Create the routes in the file we define the Flask ```app = Flask(__name__)```
 
 ```python
 @app.route('/')
@@ -40,13 +50,18 @@ def search():
    return render_template('search.html')
 ```
 
+And create a simple HTML template:
+
 ```html
+{% raw %}
 <form action = "http://127.0.0.1:5000/search" method = "POST">
     <p>Your Query: <input type = "text" name = "question" /></p>
     <p><input type = "submit" value = "submit" /></p>
  </form>
+{% endraw %}
 ```
-You can type in your query; and I will run it and route you to a page where you can see the results, namely: 
+
+A user can now type in their query; and behind the scenes it is run in Elasticsearch, and the user is routed to a page where they can see the results, namely: 
 
 ### 2. View result of search
 
@@ -72,7 +87,7 @@ def show_search_term():
         return render_template('search_result.html', answer=answer, question =question)
 ```
 
-This is rendered with a jinja2 template allowing us to loop through the list of documents we get back from Elastic and show them on the page:
+This is rendered with a jinja2 template (allowing the HTML to use for statements to iterate through lists) allowing us to loop through the list of documents we get back from Elastic and show them on the page:
 
 ```html
 <body>
