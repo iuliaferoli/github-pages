@@ -21,9 +21,7 @@
       <div class="inner">
         {% assign default_paths = site.pages | map: "path" %} 
         {% assign page_paths = site.header_pages | default: default_paths %}
-        <a class="site-title" rel="author" href="{{ '/' | relative_url }}">
-          <img src="{{ 'logo32.png' | relative_url }}" />
-        </a>
+        <img src="{{ 'logo32.png' | relative_url }}" />
         <a href="{{ '/' | absolute_url }}">
           <h1>{{ site.head_title | default: site.github.repository_name }}</h1>
         </a>
