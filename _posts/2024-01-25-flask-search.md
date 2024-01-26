@@ -28,7 +28,7 @@ What we want now is to abstract all that and only use a few simple functions to 
 Now let's Flask!
 I'm building three pages, that will look like this:
 
-<img src=img/web_app.jpeg width="500">
+<img src=/img/web_app.jpeg width="500">
 
 ### 1. User input for our search.
 
