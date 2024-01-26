@@ -3,7 +3,8 @@ title: "Simple Flask Integration for an Elastic Semantic Search App"
 date: 2024-01-25
 ---
 
-### Have you been on any websites without a search function lately? 
+# Simple Flask Integration for an Elastic Semantic Search App
+## Have you been on any websites without a search function lately? 
 How about ones that didn't allow for typos, synonyms, or "I forgot the exact word but I'm looking for something to do with these themes?". Probably not... or if you did it was likely a frustrating experience. 
 
 Semantic (or vector) Search is becoming ubiquitous in the way we interact with the internet - we're always looking for something, and we want to find it no matter how bad we may be at formulating what it is!
@@ -39,7 +40,7 @@ See the full [HTML template files](https://github.com/iuliaferoli/harry-potter-s
 
 The website pages will end us looking like this:
 
-![](/docs/assets/web-app.jpeg){: width="50%"}
+![](/docs/assets/web-app.jpeg){: width="70%"}
 
 
 
@@ -141,7 +142,7 @@ The template is very similar to the previous, just with one extra for loop to sh
 {% endraw %}
 ```
 
-There we go!
+### There we go!
 
 With a few simple lines of code, you can turn a search engine into a "Website with a Search Function". Naturally, you will more likely include these capabilities in your existing web infrastructure - which is surely more sophisticated than three Flask pages. 
 
